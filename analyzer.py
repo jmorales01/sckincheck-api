@@ -5,7 +5,6 @@ import json
 
 def main():
     if len(sys.argv) != 4:
-        print("Uso: python analyzer.py <ruta_imagen_entrada> <ruta_resultado>")
         sys.exit(1)
 
     ruta_imagen_entrada = sys.argv[1]
