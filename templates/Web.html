@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Web.css') }}">
+
+    <title>DCIA</title>
+
+</head>
+
+<body>
+    <section class="landing-dcia">
+
+        <nav>
+            <h1 class="logo">DC-IA</h1>
+            <h3>FAQ</h3>
+            <h3>ABOUT</h3>
+            <h3>STORIES</h3>
+            <h2 class="sesion">SING UP</h2>
+        </nav>
+
+        <div class="contenedor">
+            <div class="frame-16">
+                <p>Descubre Nuevas Maneras de Prevenir el caner en tu piel</p>
+            </div>
+            <div class="dcia">
+
+            </div>
+        </div>
+    </section>
+    <section class="subida-img">
+        <br>
+        <div class="contenedor2">
+            <div class="contenedor3">
+                {% if resultado_deteccion %}
+                <h2>Resultado de la Detección:</h2>
+                <img src="/assets/analytics/{{ resultado_deteccion }}" alt="Resultado de detección">
+                {% endif %}
+            </div>
+            <div class="contenedor4">
+                <h1>Sube tu imagen y deja que nuestro software te ayude</h1>
+                <div class="formulario-img">
+                    <form action="/procesar_imagen" method="post" enctype="multipart/form-data">
+                        <label for="imagen">Seleccione una imagen:</label>
+                        <input type="file" name="file" accept=".jpg, .jpeg, .png" required>
+                        <br>
+                        <p>Formatos admitidos: PNG, JPG, JPEG</p>
+                        <div>
+                            <button type="submit"><i class="las la-plus-circle"></i> Subir Imagen</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> 
+    </section>
+    <section class="resultados-img-py">
+         {% if resultado_deteccion %}
+        <h1>RESULTADOS: </h1>
+            <h4> El porcentaje alcanzado corresponde a una probabilidad del <span style="font-size: 30px; font-family: Monserrat;">70%</span>. En la actualidad, estamos dedicados a continuar mejorando y avanzando en este proyecto.</h4>
+            <h1>Probabilidad: </h1>    
+            <strong><h3> 0.0 - 0.4</h3></strong>
+                <h4>Hay una muy baja probabilidad de que tenga cáncer a la piel</h4>
+                <strong><h3> 0.5 - 0.8</h3></strong>
+                <h4>Tiene probabilidad de tener cáncer a la piel</h4>
+                <strong><h3> 0.8 - 1</h3></strong>
+                <h4>Tiene una alta probabilidad de tener cáncer a la piel. le recomendamos que vaya a un centro de salud lo mas pronto posible</h4>
+                {% endif %} 
+
+    </section>
+
+
+
+
+
+
+    <nav>
+        <h1 class="logo">DC-IA</h1>
+        <h3>Derechos reservados 2023 - Grupo 1 - Integrador</h3>
+    </nav>
+
+
+</body>
+
+</html>

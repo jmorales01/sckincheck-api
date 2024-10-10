@@ -1,0 +1,67 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.pt
+
+# =========================
+# Entornos virtuales de Python
+# =========================
+venv/
+env/
+ENV/
+.env
+env.bak/
+venv.bak/
+.venv
+*.egg-info/
+.eggs/
+dist/
+
+# =========================
+# Archivos de configuración de Python
+# =========================
+*.pyc
+*.log
+*.tmp
+*.bak
+*.swp
+*.orig
+*.sublime-workspace
+*.sublime-project
+*.iml
+
+# =========================
+# Jupyter Notebooks
+# =========================
+.ipynb_checkpoints
+*.ipynb
+
+# =========================
+# Archivos comprimidos
+# =========================
+*.rar
+*.zip
+*.tar.gz
+*.tar.bz2
+*.7z
+
+# =========================
+# IDEs y editores
+# =========================
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# =========================
+# Otros
+# =========================
+analytics/
+tmp/
