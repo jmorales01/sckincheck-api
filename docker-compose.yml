@@ -1,0 +1,15 @@
+version: '3'
+services:
+  api:
+    image: my-fastapi-app
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app
+    environment:
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_KEY=${SUPABASE_KEY}
+      - RESULT_FOLDER=${RESULT_FOLDER}
+    env_file:
+      - .env
